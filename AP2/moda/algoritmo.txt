@@ -1,0 +1,32 @@
+1.Inicializar listas:
+Cria duas listas vazias:
+    frequencias = [] para armazenar a contagem de cada valor.
+    valores_unicos=[] para armazenar os valores únicos da lista.
+
+2.Contar frequências:
+Para cada elemento lista[i] na lista de entrada:
+    Inicializa uma variável encontrado = False.
+    Percorra a lista valores_unicos:
+        Se lista[i] já estiver em valores_unicos:
+            Aumente a contagem correspondente em frequencias.
+            Altera encontrado = True.
+            Saia do loop.
+    Se lista[i] não foi encontrado em valores_unicos:
+        Adiciona lista[i] a valores_unicos.
+        Adiciona 1 à lista frequencias.
+
+3.Encontrar a maior frequência:
+    Inicializa max_frequencia = 0.
+    Percorra a lista frequencias:
+        Atualize max_frequencia com o maior valor encontrado.
+
+4.Identificar os valores com a maior frequência:
+    Cria uma lista modas = [].
+    Para cada índice na lista frequencias:
+        Se o valor em frequencias[i] for igual a max_frequencia:
+            Adiciona o valor correspondente de valores_unicos[i] à lista modas.
+
+5.Verificar se há moda:
+    Se o número de elementos em modas for igual ao número de elementos em valores_unicos:
+        Retorna None (não há moda, pois todos os valores têm a mesma frequência).
+    Caso contrário, retorne a lista modas.

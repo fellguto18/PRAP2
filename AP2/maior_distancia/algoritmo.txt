@@ -1,0 +1,23 @@
+1.Definir a função bfs (Busca em Largura):
+    Entrada: Um vértice inicial inicio.
+    Inicializa uma lista visitado len(grafo), onde todos os vértices são marcados como não visitados (0).
+    Inicializa uma lista distancia len(grafo), onde todas as distâncias são definidas como -1.
+    Cria uma fila = [] e adicionar o vértice inicial a ela.
+    Marca o vértice inicial como visitado (visitado[inicio] = 1) e define sua distância como 0 (distancia[inicio] = 0).
+    Enquanto a fila não estiver vazia:
+        Remove o primeiro elemento da fila e armazena ele em atual.
+        Para cada vizinho do vértice atual:
+            Se houver uma aresta entre atual e o vizinho, e o vizinho ainda não foi visitado:
+                Marca o vizinho como visitado.
+                Atualiza a distância do vizinho como distancia[atual] + 1.
+                Adiciona o vizinho à fila.
+    Retorna a lista distancia, que contém as distâncias do vértice inicial para todos os outros vértices.
+
+2.Calcula a maior distância no grafo:
+    Inicializa uma variável max_distancia = 0.
+    Para cada vértice no grafo:
+        Chama a função bfs a partir do vértice atual.
+        Obtém a lista de distâncias retornada pela BFS.
+        Percorre a lista de distâncias:
+            Se a distância atual for maior que max_distancia, atualizar max_distancia.
+    Retornar o valor de max_distancia.
